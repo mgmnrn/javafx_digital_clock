@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.weathericons.WeatherIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="500.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.DigitalClockController">
+   <children>
+      <HBox alignment="CENTER" layoutX="96.0" layoutY="44.0" prefHeight="112.0" prefWidth="310.0">
+         <children>
+            <Label fx:id="hour" text="00" textFill="#b71c1c">
+               <font>
+                  <Font name="System Bold Italic" size="70.0" />
+               </font>
+            </Label>
+            <Label fx:id="slash1" text=":" textFill="#b71c1c">
+               <font>
+                  <Font name="System Bold Italic" size="70.0" />
+               </font>
+            </Label>
+            <Label fx:id="minute" text="00" textFill="#b71c1c">
+               <font>
+                  <Font name="System Bold Italic" size="70.0" />
+               </font>
+            </Label>
+            <Label fx:id="slash2" text=":" textFill="#b71c1c">
+               <font>
+                  <Font name="System Bold Italic" size="70.0" />
+               </font>
+            </Label>
+            <Label fx:id="second" text="00" textFill="#b71c1c">
+               <font>
+                  <Font name="System Bold Italic" size="70.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="150.0" layoutY="153.0" prefHeight="25.0" prefWidth="185.0" spacing="5.0">
+         <children>
+            <Button fx:id="change" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #212121; -fx-border-color: RED;">
+               <graphic>
+                  <FontAwesomeIconView fill="#b71c1c" glyphName="REFRESH" size="20" />
+               </graphic>
+            </Button>
+            <Button fx:id="up" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #212121; -fx-border-color: RED;">
+               <graphic>
+                  <FontAwesomeIconView fill="#b71c1c" glyphName="CHEVRON_UP" size="20" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#power" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #212121; -fx-border-color: RED;" textFill="#b71c1c">
+               <graphic>
+                  <FontAwesomeIconView fill="#b71c1c" glyphName="POWER_OFF" size="20" />
+               </graphic>
+            </Button>
+            <Button fx:id="down" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #212121; -fx-border-color: RED;">
+               <graphic>
+                  <FontAwesomeIconView fill="#b71c1c" glyphName="CHEVRON_DOWN" size="20" />
+               </graphic>
+            </Button>
+            <Button fx:id="play" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #212121; -fx-border-color: RED;" textFill="#b71c1c">
+               <graphic>
+                  <FontAwesomeIconView fill="#b71c1c" glyphName="PLAY" size="20" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="354.0" layoutY="5.0" prefHeight="38.0" prefWidth="144.0" spacing="5.0">
+         <children>
+            <FontAwesomeIconView fx:id="alarm" fill="#b71c1c" glyphName="BELL_SLASH_ALT" size="20" wrappingWidth="23.99993896484375" />
+            <Label fx:id="gradus" contentDisplay="RIGHT" text="-30" textFill="#b71c1c">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <WeatherIconView fill="#b71c1c" glyphName="CELSIUS" size="20" wrappingWidth="10.9375" />
+               </graphic>
+            </Label>
+            <Label fx:id="batteryPercent" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="65.0" text="100" textFill="#b71c1c">
+               <graphic>
+                  <FontAwesomeIconView fx:id="battery" fill="#b71c1c" glyphName="BATTERY_4" size="20" wrappingWidth="26.380971908569336" />
+               </graphic>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label fx:id="date" layoutX="14.0" layoutY="9.0" text="####-##-##" textFill="#b71c1c">
+         <graphic>
+            <FontAwesomeIconView fill="#b71c1c" glyphName="CALENDAR" size="20" />
+         </graphic>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
