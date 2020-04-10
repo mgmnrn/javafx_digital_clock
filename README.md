@@ -1,3 +1,3 @@
 # javafx_digital_clock
 Digital clock - Дижитал цаг
-![](images/clock.png)
+![](https://raw.githubusercontent.com/mgmnrn/javafx_digital_clock/master/images/clock.png)
